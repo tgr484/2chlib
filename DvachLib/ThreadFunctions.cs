@@ -10,9 +10,9 @@ namespace DvachLib
 {
     public class ThreadFunctions
     {
-        public static ThreadInfo GetThreadById(int threadId)
+        public static ThreadInfo GetThreadByBoardNameAndId(string boardName, int threadId)
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"http://2ch.hk/b/res/{threadId}.json");
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"http://2ch.hk/{boardName}/res/{threadId}.json");
             httpWebRequest.ContentType = "text/json";
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
