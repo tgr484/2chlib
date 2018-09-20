@@ -8,21 +8,6 @@ using System.Threading.Tasks;
 
 namespace DvachLib
 {
-    public class ThreadFunctions
-    {
-        public static ThreadInfo GetThreadByBoardNameAndId(string boardName, int threadId)
-        {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create($@"http://2ch.hk/{boardName}/res/{threadId}.json");
-            httpWebRequest.ContentType = "text/json";
-            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-            {
-                return Newtonsoft.Json.JsonConvert.DeserializeObject<ThreadInfo>(streamReader.ReadToEnd());
-            }
-        }
-
-    }
-
     public class ThreadInfo
     {
         public string Board { get; set; }

@@ -44,9 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BoardFunctions.cs" />
+    <Compile Include="DTO\Board.cs" />
+    <Compile Include="Funtions\GetFunctions.cs" />
+    <Compile Include="Helpers\RequestHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThreadFunctions.cs" />
+    <Compile Include="DTO\Thread.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
