@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DvachLib
 {
-    public class Thread
+    internal class ThreadInBoard
     {
         public string comment { get; set; }
         public int lasthit { get; set; }
@@ -21,9 +21,9 @@ namespace DvachLib
         public int views { get; set; }
     }
 
-    public class Board
+    internal class BoardDto
     {
         public string board { get; set; }
-        public Thread[] threads { get; set; }
+        public ThreadInBoard[] threads { get; set; }
     }
 }

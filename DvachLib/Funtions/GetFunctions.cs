@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using DvachLib.Objects;
 
 namespace DvachLib.Funtions
 {
@@ -15,9 +16,9 @@ namespace DvachLib.Funtions
             return Helpers.RequestHelper.MakeRequest<Board>($@"http://2ch.hk/{boardName}/threads.json");         
         }
 
-        public static ThreadInfo GetThreadByBoardNameAndId(string boardName, int threadId)
+        public static Thread GetThreadByBoardNameAndId(string boardName, int threadId)
         {
-            return Helpers.RequestHelper.MakeRequest<ThreadInfo>($@"http://2ch.hk/{boardName}/res/{threadId}.json");
+            return Helpers.RequestHelper.MakeRequest<Thread>($@"http://2ch.hk/{boardName}/res/{threadId}.json");
         }
     }
 }

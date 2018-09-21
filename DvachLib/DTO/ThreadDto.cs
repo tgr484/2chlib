@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DvachLib
 {
-    public class ThreadInfo
+    internal class ThreadDto
     {
         public string Board { get; set; }
         public string BoardInfo { get; set; }
@@ -54,7 +54,7 @@ namespace DvachLib
         public Threads[] threads { get; set; }
     }
 
-    public class News_abu
+    internal class News_abu
     {
         public string date { get; set; }
         public int num { get; set; }
@@ -62,19 +62,19 @@ namespace DvachLib
         public int views { get; set; }
     }
 
-    public class Threads
+    internal class Threads
     {
         public Post[] posts { get; set; }
     }
 
-    public class Top
+    internal class Top
     {
         public string board { get; set; }
         public string info { get; set; }
         public string name { get; set; }
     }
 
-    public class Post
+    internal class Post
     {
         public int banned { get; set; }
         public int closed { get; set; }
@@ -95,7 +95,7 @@ namespace DvachLib
         public string trip { get; set; }
     }
 
-    public class File
+    internal class File
     {
         public string displayname { get; set; }
         public string fullname { get; set; }
