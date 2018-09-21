@@ -64,7 +64,7 @@ namespace DvachLib
 
     internal class Threads
     {
-        public Post[] posts { get; set; }
+        public PostInThread[] posts { get; set; }
     }
 
     internal class Top
@@ -74,7 +74,7 @@ namespace DvachLib
         public string name { get; set; }
     }
 
-    internal class Post
+    internal class PostInThread
     {
         public long banned { get; set; }
         public long closed { get; set; }
