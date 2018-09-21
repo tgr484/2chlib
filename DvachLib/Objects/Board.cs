@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace DvachLib.Objects
 {
+    /// <summary>
+    /// Хранит список тредов по борде
+    /// </summary>
     public class Board
     {
         private BoardDto _dto;
@@ -20,6 +23,9 @@ namespace DvachLib.Objects
         }
     }
 
+    /// <summary>
+    /// Информация о треде
+    /// </summary>
     public class ThreadInfo
     {
         private ThreadInBoard _dto;
@@ -35,5 +41,4 @@ namespace DvachLib.Objects
             _dto = dto;
         }
     }
-
 }

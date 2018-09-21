@@ -11,6 +11,11 @@ namespace DvachLib.Funtions
 {
     public class GetFunctions
     {
+        /// <summary>
+        /// Получает списко тредов по борде
+        /// </summary>
+        /// <param name="boardName">Название борды, например b</param>
+        /// <returns>Board</returns>
         public static Board GetBoardByName(string boardName)
         {
             return new Board(Helpers.RequestHelper.MakeRequest<BoardDto>($@"http://2ch.hk/{boardName}/threads.json"));         

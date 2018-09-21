@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace DvachLib.Objects
 {
+    /// <summary>
+    /// Хранит тред
+    /// </summary>
     public class Thread
     {
         private ThreadDto _dto;
@@ -20,6 +23,9 @@ namespace DvachLib.Objects
         }
     }
 
+    /// <summary>
+    /// Отдельный пост в треде
+    /// </summary>
     public class Post
     {
         private PostInThread _dto;
