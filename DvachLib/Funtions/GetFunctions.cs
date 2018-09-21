@@ -13,12 +13,12 @@ namespace DvachLib.Funtions
     {
         public static Board GetBoardByName(string boardName)
         {
-            return Helpers.RequestHelper.MakeRequest<Board>($@"http://2ch.hk/{boardName}/threads.json");         
+            return new Board(Helpers.RequestHelper.MakeRequest<BoardDto>($@"http://2ch.hk/{boardName}/threads.json"));         
         }
 
         public static Thread GetThreadByBoardNameAndId(string boardName, int threadId)
         {
-            return Helpers.RequestHelper.MakeRequest<Thread>($@"http://2ch.hk/{boardName}/res/{threadId}.json");
+            return new Thread(Helpers.RequestHelper.MakeRequest<ThreadDto>($@"http://2ch.hk/{boardName}/res/{threadId}.json"));
         }
     }
 }

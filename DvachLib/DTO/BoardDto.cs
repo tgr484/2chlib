@@ -12,13 +12,13 @@ namespace DvachLib
     internal class ThreadInBoard
     {
         public string comment { get; set; }
-        public int lasthit { get; set; }
-        public int num { get; set; }
-        public int posts_coun { get; set; }
+        public long lasthit { get; set; }
+        public long num { get; set; }
+        public long posts_count { get; set; }
         public double score { get; set; }
         public string subject { get; set; }
-        public int timestamp { get; set; }
-        public int views { get; set; }
+        public long timestamp { get; set; }
+        public long views { get; set; }
     }
 
     internal class BoardDto

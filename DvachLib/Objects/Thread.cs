@@ -8,5 +8,10 @@ namespace DvachLib.Objects
 {
     public class Thread
     {
+        private ThreadDto _dto;
+        internal Thread(ThreadDto dto)
+        {
+            _dto = dto;
+        }
     }
 }
